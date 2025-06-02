@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duck Family Vacation Game</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #cceeff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    header {
+      background-color: #4fc3f7;
+      width: 100%;
+      text-align: center;
+      padding: 1em;
+      color: white;
+      font-size: 1.5em;
+    }
+    #game {
+      max-width: 800px;
+      margin: 2em auto;
+      background: white;
+      padding: 2em;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    #story {
+      min-height: 200px;
+    }
+    .choice {
+      display: block;
+      margin: 1em 0;
+      padding: 1em;
+      background-color: #ffeb3b;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .choice:hover {
+      background-color: #fff176;
+    }
+    footer {
+      margin: 2em;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Duck Family's Fun Vacation 🦆🌴
+  </header>
+  <div id="game">
+    <div id="story"></div>
+    <div id="choices"></div>
+  </div>
+  <footer>
+    Made with ❤️ for Github Pages
+  </footer>
+
+  <script>
+    const storyEl = document.getElementById("story");
+    const choicesEl = document.getElementById("choices");
+
+    const story = [
+      {
+        text: "The Duck Family is ready for a vacation! Where should they go first?",
+        choices: [
+          { text: "Go to the Pool", next: 1 },
+          { text: "Go to the Beach", next: 2 },
+        ]
+      },
+      {
+        text: "Quackers tries a cannonball but only makes a little splash. Peep floats on a flamingo float. What next?",
+        choices: [
+          { text: "Jump on the float", next: 3 },
+          { text: "Swim underwater", next: 4 }
+        ]
+      },
+      {
+        text: "At the beach, they build a huge sandcastle and find shells. A crab surprises Quackers! What's next?",
+        choices: [
+          { text: "Run from the crab!", next: 5 },
+          { text: "Take a photo of the crab", next: 6 }
+        ]
+      },
+      {
+        text: "SPLASH! They both fall in the water and laugh so hard!",
+        choices: [{ text: "Next Day", next: 7 }]
+      },
+      {
+        text: "They swim like little fish and find a shiny pebble at the bottom!",
+        choices: [{ text: "Next Day", next: 7 }]
+      },
+      {
+        text: "Quackers runs screaming and drops his hat. The crab waddles away like a hero.",
+        choices: [{ text: "Next Day", next: 7 }]
+      },
+      {
+        text: "They snap a selfie with the crab and name him Sir Pinch-a-lot.",
+        choices: [{ text: "Next Day", next: 7 }]
+      },
+      {
+        text: "Mommy Duck starts a treasure hunt! First clue: Check the pool for a tool!",
+        choices: [
+          { text: "Dive into the pool!", next: 8 }
+        ]
+      },
+      {
+        text: "Peep finds a toy shovel! The next clue: Dig at the beach!",
+        choices: [
+          { text: "Dig, dig, dig!", next: 9 }
+        ]
+      },
+      {
+        text: "They find a treasure chest with chocolate coins and a trophy!",
+        choices: [
+          { text: "Celebrate at the pool!", next: 10 }
+        ]
+      },
+      {
+        text: "They share their treasure with all their friends. Everyone cheers for the best duck adventurers!",
+        choices: [
+          { text: "Go home tomorrow", next: 11 }
+        ]
+      },
+      {
+        text: "Time to say goodbye. But they'll return next year! The Duck Family’s holiday was quacktastic! 🦆🌞",
+        choices: [
+          { text: "Play Again", next: 0 }
+        ]
+      }
+    ];
+
+    function renderScene(index) {
+      const scene = story[index];
+      storyEl.textContent = scene.text;
+      choicesEl.innerHTML = "";
+
+      scene.choices.forEach(choice => {
+        const btn = document.createElement("button");
+        btn.className = "choice";
+        btn.textContent = choice.text;
+        btn.onclick = () => renderScene(choice.next);
+        choicesEl.appendChild(btn);
+      });
+    }
+
+    renderScene(0);
+  </script>
+</body>
+</html>
