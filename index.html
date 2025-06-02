@@ -55,7 +55,7 @@
 </head>
 <body>
   <header>
-    Duck Family's Fun Vacation 🦆🌴
+    Duck Family's Fun Vacation at the Arcos Playa 🦆🌴
   </header>
   <div id="game">
     <div id="story"></div>
@@ -71,64 +71,110 @@
 
     const story = [
       {
-        text: "The Duck Family is ready for a vacation! Where should they go first?",
+        text: `Once upon a time, there was a family of ducks who lived by a peaceful pond. There was Daddy Duck, who had the biggest beak in the family; Mommy Duck, who loved to keep everyone organized; and their two ducklings, Quackers (the adventurous one) and Peep (the funny one who always made everyone laugh).
+One sunny morning, Daddy Duck quacked loudly, “Pack your feathers, everyone! We’re going on vacation to Mallorca! We’re staying at the Arcos Playa Apartments in S’Illot!”
+“Yay!” shouted Quackers, flapping his tiny wings.
+“Do they have a pool?” asked Peep.
+“They have a pool and they’re right next to the beach!” Mommy Duck said with a smile`,
         choices: [
-          { text: "Go to the Pool", next: 1 },
-          { text: "Go to the Beach", next: 2 },
+          { text: "Fly to the Arcos Playa!", next: 1 },
         ]
       },
       {
-        text: "Quackers tries a cannonball but only makes a little splash. Peep floats on a flamingo float. What next?",
+        text: `Day 1:The Duck family waddled off the plane and took a taxi to the Arcos Playa Apartments. When they arrived, they couldn’t believe how beautiful it was! There were palm trees, the sound of waves crashing nearby, and a big pool that sparkled in the sun.
+“I’m jumping in the pool right now!” shouted Quackers.
+“Wait, Quackers!” said Mommy Duck. “We need to check in first!”
+At the reception desk, the receptionist smiled and said, “Welcome to Arcos Playa Apartments! You’re staying in Apartment 23, with a view of the pool!”
+“That’s perfect!” said Daddy Duck. “I can keep an eye on Quackers from the balcony.”
+ `,
+        choices: [
+          { text: "Go to the Pool", next: 2 },
+        ]
+      },
+      {
+        text: `Day 1 continues! As soon as they unpacked, the ducklings raced to the pool. Quackers tried to do a cannonball, but he just made a little splash. Peep, on the other hand, decided to float on an inflatable flamingo.
+“Look at me! I’m a flamingo-duck!” Peep quacked, wobbling on the float. Everyone around the pool laughed. Even Daddy Duck couldn’t stop chuckling.
+But then Quackers tried to jump onto the flamingo, and SPLASH! Both ducklings fell into the water. “Quackers! You ruined my flamingo act!” said Peep, but then they both started laughing so hard that bubbles came up from the water.
+`,
         choices: [
           { text: "Jump on the float", next: 3 },
-          { text: "Swim underwater", next: 4 }
+          { text: "Swim underwater", next: 3 }
         ]
       },
       {
-        text: "At the beach, they build a huge sandcastle and find shells. A crab surprises Quackers! What's next?",
+        text: `The sun peeked through the curtains early in the morning, and the Duck Family was ready for adventure! After a yummy breakfast of pancakes and fresh fruit on the apartment balcony, they all packed their beach bags and waddled down to the soft sandy beach just a few steps away.
+The little ducklings, Quackers and Peep, built the biggest sandcastle ever — complete with a moat that filled up when the waves came in! Mama Duck relaxed under a big yellow umbrella, sipping a cool lemonade, while Papa Duck taught Peep how to jump over the waves without getting his feathers too wet (although they definitely got soaked a few times!).`
+,
         choices: [
-          { text: "Run from the crab!", next: 5 },
-          { text: "Take a photo of the crab", next: 6 }
+          { text: "Lets watch the Sunset!", next: 4 },
         ]
       },
       {
-        text: "SPLASH! They both fall in the water and laugh so hard!",
-        choices: [{ text: "Next Day", next: 7 }]
+        text: `In the afternoon, they explored the little shops nearby. Quackers picked out a bright pink sunhat, and Peep got a toy boat for more beach adventures. After a delicious dinner of fresh seafood at a cozy restaurant near the apartments, the Duck Family watched the sunset together — the sky glowing in beautiful shades of orange and purple.
+Everyone agreed: Day 2 was quacking perfect!`,
+        choices: [{ text: "Next Day", next: 5 }]
       },
       {
-        text: "They swim like little fish and find a shiny pebble at the bottom!",
-        choices: [{ text: "Next Day", next: 7 }]
+        text: `Day 3: The Beach Adventure 🌊🐚
+On their third day, the Duck family waddled to the beach. Daddy Duck brought his fishing rod, Mommy Duck brought her sunglasses, and the ducklings brought a big bucket for collecting seashells.
+“Let’s see who can find the coolest shell!” said Quackers.
+Peep found a shell shaped like a heart. “Look! It’s for you, Mommy Duck!”
+Quackers found a shell with a crab inside. “Look! It’s alive!” he shouted, running around the beach with the crab pinching the edge of the bucket.
+“Quackers, stop scaring the crab!” said Mommy Duck, but she couldn’t help laughing. Even Daddy Duck chuckled so hard he almost dropped his fishing rod.
+`,
+        choices: [{ text: "Run from the crab!", next: 6 },
+          { text: "Take a picture with the crab!", next: 7 }
+        ]
       },
       {
         text: "Quackers runs screaming and drops his hat. The crab waddles away like a hero.",
-        choices: [{ text: "Next Day", next: 7 }]
+        choices: [{ text: "Next Day", next: 8 }]
       },
       {
         text: "They snap a selfie with the crab and name him Sir Pinch-a-lot.",
-        choices: [{ text: "Next Day", next: 7 }]
+        choices: [{ text: "Next Day", next: 8 }]
       },
       {
-        text: "Mommy Duck starts a treasure hunt! First clue: Check the pool for a tool!",
+        text: `Day 4 – Island Adventure, Exploring Hidden Coves,  Market Day 
+
+After a big breakfast, they went on a boat tour around the coast. Pip and Poppy pretended they were pirate captains searching for treasure. They spotted colorful fish, caves, and even a dolphin jumping near the boat!
+Mommy Daisy suggested a little adventure: finding a secret beach! With a picnic packed, they set off along the rocky paths. After a short adventure, they found a tiny cove with crystal-clear water, just for themselves. They splashed, played, and laughed until the sun started to dip.
+The Duck family waddled to the local market in S'Illot. There were stalls full of bright fruits, shiny souvenirs, and mouth-watering smells. They bought sweet strawberries and little bracelets.
+Quacker and Peep each got a double-scoop ice cream cone (Peep dropped his scoop, but a kind waiter gave him another!). Sticky, giggly, and happy, they waddled back to Arcos Playa for a nap by the pool.    After all that day it was time to go to bed
+`,
         choices: [
-          { text: "Dive into the pool!", next: 8 }
+          { text: "Phew! Let´s get some rest", next: 9 }
         ]
       },
       {
-        text: "Peep finds a toy shovel! The next clue: Dig at the beach!",
+        text: `Day 5: Karaoke Night at Arcos Playa 🎤🎶
+On their fifth night, the family joined the karaoke contest at Arcos Playa. Daddy Duck sang a terrible version of “Dancing Duck Queen,” and everyone laughed so hard they couldn’t even quack.
+Then it was Peep and Quackers’ turn. They sang a silly song they made up:
+"We’re the ducklings, we’re here to play,
+Swimming and quacking all the day!
+Mallorca’s fun, Arcos Playa’s the best,
+We’ll sing and laugh till it’s time to rest!"
+The crowd cheered and clapped. Even the receptionist from the front desk came to watch! “You two are going to be famous!” she said.
+`,
         choices: [
-          { text: "Dig, dig, dig!", next: 9 }
+          { text: "Wow - what is nex?", next: 10 }
         ]
       },
       {
-        text: "They find a treasure chest with chocolate coins and a trophy!",
+        text: `Day 6 - A Treasure Hunt!
+        On the sixth day of their vacation, the Duck family woke up to a bright and sunny morning. Quackers and Peep were bubbling with excitement because Mommy Duck had planned a treasure hunt around the Arcos Playa Apartments!
+“Today, we’re going to find hidden treasures!” Mommy Duck announced, holding a colorful map. “Each clue will lead you to the next one, and at the end, there’s a special surprise!”
+“Yay! I love surprises!” quacked Quackers, flapping his wings.
+“Me too! What do you think it is?” asked Peep, bouncing up and down.
+`,
         choices: [
-          { text: "Celebrate at the pool!", next: 10 }
+          { text: "Get the first clue!", next: 11 }
         ]
       },
       {
         text: "They share their treasure with all their friends. Everyone cheers for the best duck adventurers!",
         choices: [
-          { text: "Go home tomorrow", next: 11 }
+          { text: "Go home tomorrow", next: 12 }
         ]
       },
       {
