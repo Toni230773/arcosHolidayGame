@@ -350,6 +350,7 @@ And so, the Duck family’s vacation at Arcos Playa Apartments became a story th
         btn.textContent = choice.text;
         btn.onclick = () => renderScene(choice.next);
         choicesEl.appendChild(btn);
+        window.scrollTo(0, 0);
       });
     }
 
